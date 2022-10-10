@@ -7,5 +7,13 @@ import java.util.List;
 
 @Data
 public class Row {
-    public List<String> value = new ArrayList<>();
+    private List<String> values;
+
+    public Row() {
+        this.values = new ArrayList<>();
+    }
+
+    public Row(List<String> values) {
+        this.values = values;
+    }
 }

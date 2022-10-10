@@ -8,7 +8,10 @@ import java.util.List;
 @Data
 public class Database {
 
-    public String name;
-    public List<Table> tables = new ArrayList<>();
+    private String name;
+    private List<Table> tables = new ArrayList<>();
 
+    public Database(String name) {
+        this.name = name;
+    }
 }

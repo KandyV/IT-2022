@@ -1,19 +1,20 @@
 package com.knu;
 
-import lombok.AccessLevel;
-import lombok.Data;
-import lombok.Getter;
+import lombok.*;
 
 @Data
 abstract public class Column {
-    public String name;
+    protected String name;
 
-    @Getter(value = AccessLevel.PRIVATE)
-    public String type = "";
+    private String type;
 
     public Column(String name) {
         this.name = name;
     }
 
-    public abstract boolean Validate(String value);
+    protected abstract boolean validate(String value);
+    protected abstract String getType();
+
 }
+
+
